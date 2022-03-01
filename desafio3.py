@@ -1,29 +1,24 @@
-# Duas palavras podem ser consideradas anagramas de si mesmas se as letras de uma palavra podem ser realocadas para formar a outra palavra. Dada uma string qualquer, desenvolva um algoritmo que encontre o número de pares de substrings que são anagramas.
-
 class AnalisaAnagramas():
     def __init__(self, palavra):
         self.palavra = palavra
-        self.anagramas = []
+        self.tamanho = len(palavra)
 
-    def analisa(self):
-        self.anagramas = []
-        for i in range(len(self.palavra)):
-            for j in range(i+1, len(self.palavra)):
-                self.anagramas.append(self.palavra[i:j+1])
-        return self.anagramas
-
-    def ordena_anagramas(self, anagramas):
-        for anagrama in anagramas:
-            anagrama.sort()
-            print(anagrama)
-        return self.anagramas
-
-    def conta_anagramas(self):
-        return len(self.anagramas)
+    def verifica_anagrama(self):
+        '''Recebe uma string qualquer e retorna as combinações de anagramas possíveis'''
+        len_anagrama = 0
+        anagrama_dict = {}
+        for i in range(self.tamanho):
+            for j in range(i, self.tamanho):
+                sub_string = ''.join(sorted(self.palavra[i:j+1]))
+                if sub_string not in anagrama_dict:
+                    anagrama_dict[sub_string] = 1
+                else:
+                    anagrama_dict[sub_string] += 1
+                len_anagrama += anagrama_dict[sub_string]-1
+        return len_anagrama
 
 
 if __name__ == '__main__':
-    a = AnalisaAnagramas('abba')
-    resultado = a.analisa()
-    # resultado = a.ordena_anagramas(resultado)
-    print(resultado)
+    a = AnalisaAnagramas('ovo')
+    output = a.verifica_anagrama()
+    print(output)
