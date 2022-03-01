@@ -8,7 +8,7 @@ Os desafios são:
 3. Analisar anagramas.
 
 ## Instalação
-Este projeto usa a versão Python 3.10.
+Este projeto usa a versão [Python 3.10](https://www.python.org/downloads/).
 Para baixar e rodar este código, siga as etapas abaixo no seu terminal:
 
 ```
