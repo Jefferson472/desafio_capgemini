@@ -4,7 +4,8 @@ class AnalisaAnagramas():
         self.tamanho = len(palavra)
 
     def verifica_anagrama(self):
-        '''Recebe uma string qualquer e retorna as combinações de anagramas possíveis'''
+        '''Recebe uma string qualquer e retorna as combinações de anagramas
+        possíveis'''
         len_anagrama = 0
         anagrama_dict = {}
         for i in range(self.tamanho):
@@ -19,6 +20,7 @@ class AnalisaAnagramas():
 
 
 if __name__ == '__main__':
-    a = AnalisaAnagramas('ovo')
+    entrada = str(input('Digite uma palavra: '))
+    a = AnalisaAnagramas(entrada)
     output = a.verifica_anagrama()
     print(output)

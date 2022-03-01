@@ -2,6 +2,7 @@ import re
 
 
 class AnalisaSenha():
+    '''Recebe uma string qualquer e verifica se atende aos requisitos'''
     def __init__(self, senha_string):
         self.SENHA = senha_string
 
@@ -34,7 +35,7 @@ class AnalisaSenha():
 
 
 if __name__ == '__main__':
-    senha_string = 'Ya3'
+    senha_string = str(input('Digite uma senha: '))
     s = AnalisaSenha(senha_string)
     output = 0
     if not s.verifica_min_digito():
