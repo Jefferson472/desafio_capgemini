@@ -31,3 +31,7 @@ python desafio2.py
 python desafio3.py
 ```
 * E digite uma palavra para ser verificado quantos anagramas são possíveis através da combinações das letras.
+
+
+## Testes
+Os testes foram realizados utilizando a biblioteca Pytest e estão disponíveis no diretório [tests](https://github.com/Jefferson472/desafio_capgemini/tree/master/tests).
